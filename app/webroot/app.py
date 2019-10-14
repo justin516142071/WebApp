@@ -14,7 +14,7 @@ def login():
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
-        flash(f'Account created for {form.username.data}!', 'success')
+        flash(f'Success created account for {form.username.data}!', 'success')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register',form = form)
 
@@ -23,4 +23,4 @@ def spell_check():
     return "<h1>Check</h1>"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
