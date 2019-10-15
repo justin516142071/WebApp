@@ -2,22 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0f46dc5-f2b1-4824-82fd-3ad5e4951e18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webroot/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/webroot/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/webroot/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/webroot/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/webroot/templates/spell_check.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/webroot/static/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/webroot/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/webroot/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/webroot/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/webroot/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/webroot/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/webroot/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/webroot/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/webroot/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/webroot/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/webroot/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/webroot/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/webroot/site.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/webroot/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/webroot/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/webroot/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/webroot/templates/register.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="site" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -85,6 +105,21 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@60a7c74f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -97,7 +132,7 @@
       <updated>1570937969416</updated>
       <workItem from="1570937992203" duration="7973000" />
       <workItem from="1570946795029" duration="1199000" />
-      <workItem from="1571034872728" duration="6097000" />
+      <workItem from="1571034872728" duration="14907000" />
     </task>
     <servers />
   </component>
