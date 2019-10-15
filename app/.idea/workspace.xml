@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0f46dc5-f2b1-4824-82fd-3ad5e4951e18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/webroot/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/webroot/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/webroot/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/webroot/templates/spell_check.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/webroot/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/webroot/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/webroot/templates/register.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -34,6 +40,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webroot/webroot" />
       <recent name="$PROJECT_DIR$/webroot/templates" />
     </key>
   </component>
@@ -90,7 +97,7 @@
       <updated>1570937969416</updated>
       <workItem from="1570937992203" duration="7973000" />
       <workItem from="1570946795029" duration="1199000" />
-      <workItem from="1571034872728" duration="56000" />
+      <workItem from="1571034872728" duration="6097000" />
     </task>
     <servers />
   </component>
