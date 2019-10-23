@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField,PasswordField,SubmitField,BooleanField,ValidationError
+from wtforms import StringField,PasswordField,SubmitField,BooleanField,ValidationError,TextAreaField
 from wtforms.validators import DataRequired,Length, EqualTo
 from webroot.models import User
 
@@ -31,5 +31,6 @@ class LoginForm(FlaskForm):
 
     submit = SubmitField('Login')
 
-#class SpellScheckForm(FlaskForm):
-    #content =
+class SpellScheckForm(FlaskForm):
+    content = TextAreaField('Content', validators=[DataRequired()])
+    submit = SubmitField('Check')
