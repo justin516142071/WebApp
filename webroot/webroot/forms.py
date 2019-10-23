@@ -30,6 +30,6 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Login')
 
 class SpellScheckForm(FlaskForm):
-    content = TextAreaField('Content', validators=[DataRequired()])
+    content = TextAreaField('Content', validators=[DataRequired()],id='inputtext')
 
     submit = SubmitField('Check')
