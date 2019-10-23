@@ -38,13 +38,5 @@
         </div>
     </form>
 </div>
-{% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-        <h1 id='textout'> {{  form.content(class="form-control form-control-lg")  }}</h1>
-            <div class = "alert alert-{{ category }}" id = "misspelled">
-                {{ message }}
-            </div>
-    {% endif %}
-{% endwith %}
 </body>
 </html>
