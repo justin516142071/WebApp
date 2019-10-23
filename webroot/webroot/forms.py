@@ -31,4 +31,5 @@ class LoginForm(FlaskForm):
 
 class SpellScheckForm(FlaskForm):
     content = TextAreaField('Content', validators=[DataRequired()])
+    
     submit = SubmitField('Check')

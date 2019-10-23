@@ -47,6 +47,6 @@ def spell_check():
         #for item in subout:
          #   newout.append(item)
         #stringout = ','.join(subout)
-        flash(f'{subout}', 'success')
+        flash(f'success', 'success')
     return render_template('spell_check.html', title='Spell Check', form=form)
 
