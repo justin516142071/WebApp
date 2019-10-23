@@ -12,6 +12,7 @@ def login():
         user = User.query.filter_by(username=form.username.data).first()
         if user and bcrypt.check_password_hash(user.password, form.password.data) and form.fc2.data:
             login_user(user,remember=form.remember.data)
+            flash(f'Success login account for {form.username.data}!', 'success')
             return redirect(url_for('spell_check'))
         else:
             flash(f'Failure login account for {form.username.data}!', 'fail')
