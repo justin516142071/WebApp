@@ -7,7 +7,7 @@ class RegistrationForm(FlaskForm):
     username = StringField('Username',
                            validators=[DataRequired(),Length(min=6,max=20)],id = 'uname')
     fc2 = StringField('Two Factor',
-                      validators=[DataRequired(),Length(min=10,max=10)],id= '2fa')
+                      validators=[DataRequired(),Length(min=10,max=11)],id= '2fa')
     password = PasswordField('Password',
                              validators=[DataRequired(),Length(min=6,max=20)], id ='pword')
     submit = SubmitField('Sign Up')
