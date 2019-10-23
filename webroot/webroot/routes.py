@@ -25,10 +25,10 @@ def register():
         user = User(username=form.username.data, password=hashed_password, fc2 = form.fc2.data)
         db.session.add(user)
         db.session.commit()
-        flash(f'Success created account for {form.username.data}!', 'success',id="success")
+        flash(f'Success created account for {form.username.data}!', 'success')
         return redirect(url_for('login'))
     elif(form.username.data != None):
-        flash(f'Failure create account for {form.username.data}!', 'fail',id="success")
+        flash(f'Failure create account for {form.username.data}!', 'fail')
         return redirect(url_for('register'))
     return render_template('register.html', title='Register',form = form)
 
