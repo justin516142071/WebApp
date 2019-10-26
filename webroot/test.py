@@ -31,12 +31,12 @@ class FlaskTestCase(unittest.TestCase):
         res = self.app.get("/spell_check")
         assert res.status_code == 401
 
-   # def test_route_loginacc(self):
-   #     #res = self.app.post("/login", data={'uname': 'easyeasyacc', 'pword': '123456', '2fa': '1234567890'})
-   #     res = self.app.post("/login",data={'uname':'easyeasyacc','pword':'123456','2fa':'1234567890'},follow_redirects=True)
-   #     print(res.status_code)
-   #     res = self.app.get("/spell_check")
-   #     assert 'Failure' in res.data.decode("utf-8")
+    def test_route_loginacc(self):
+        #res = self.app.post("/login", data={'uname': 'easyeasyacc', 'pword': '123456', '2fa': '1234567890'})
+        res = self.app.post("/login",data={'uname':'easyeasyacc','pword':'123456','2fa':'1234567890'},follow_redirects=True)
+        print(res.status_code)
+        res = self.app.get("/spell_check")
+        assert 'Failure' in res.data.decode("utf-8")
 
 if __name__ == '__main__':
     unittest.main()

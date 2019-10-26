@@ -2,6 +2,11 @@ sudo: false
 language: python
 python:
     - "3.7"
-install: pip install tox-travis
+install:
+    - pip install tox-travis
+    - pip install coverage
 before_script: cd webroot
-script: tox
+script:
+    - tox
+    - coverage run
+    - coverage report --include="*webroot*" --omit="*test*"
