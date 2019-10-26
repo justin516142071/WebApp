@@ -16,9 +16,9 @@ def login():
                flash(f'Success login account for {form.username.data}!', 'success')
                return redirect(url_for('spell_check'))
             else:
-                flash(f'Failure login account for {form.username.data}! Two-factor Authentication Failed', 'fail')
+                flash(f'Failure login account for {form.username.data}! Two-factor Authentication Failed', 'error')
         else:
-            flash(f'Failure login account for {form.username.data}! Incorrect Username or Password', 'fail')
+            flash(f'Failure login account for {form.username.data}! Incorrect Username or Password', 'error')
     return render_template('login.html', title='Login',form = form)
 
 @app.route('/register', methods=['GET','POST'])
