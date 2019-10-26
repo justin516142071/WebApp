@@ -97,5 +97,5 @@ ENV/
 
 # mypy
 .mypy_cache/
-*.idea
-*.tox/py37
+*/.idea
+*/.tox/py37
