@@ -3,19 +3,22 @@ from webroot.forms import RegistrationForm, LoginForm, SpellScheckForm
 from webroot import app, db, bcrypt
 from webroot.models import User
 from flask_login import login_user, login_required
-import subprocess
+from subprocess import check_output
 
 @app.route('/login', methods=['GET','POST'])
 def login():
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
-        if user and bcrypt.check_password_hash(user.password, form.password.data) and form.fc2.data:
-            login_user(user,remember=form.remember.data)
-            flash(f'Success login account for {form.username.data}!', 'success')
-            return redirect(url_for('spell_check'))
+        if user and bcrypt.check_password_hash(user.password, form.password.data):
+            if user.fc2 == form.fc2.data:
+               login_user(user,remember=form.remember.data)
+               flash(f'Success login account for {form.username.data}!', 'success')
+               return redirect(url_for('spell_check'))
+            else:
+                flash(f'Failure login account for {form.username.data}! Two-factor Authentication Failed', 'fail')
         else:
-            flash(f'Failure login account for {form.username.data}!', 'fail')
+            flash(f'Failure login account for {form.username.data}! Incorrect Username or Password', 'fail')
     return render_template('login.html', title='Login',form = form)
 
 @app.route('/register', methods=['GET','POST'])
@@ -43,11 +46,8 @@ def spell_check():
         file1.write(content)
         file1.close()
         cmd = ["./a.out", "content.txt", "wordlist.txt"]
-        subout = subprocess.call(cmd)
-        #newout = list()
-        #for item in subout:
-         #   newout.append(item)
-        #stringout = ','.join(subout)
-        flash(f'success', 'success')
+        subout = check_output(cmd).decode("utf-8")
+        form.outcontent.data = form.content.data
+        form.misspelled.data = subout
     return render_template('spell_check.html', title='Spell Check', form=form)
 

@@ -8,9 +8,16 @@
 {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
         {% for category, message in messages %}
-            <div class = "alert alert-{{ category }}" id = "success">
-                {{ message }}
-            </div>
+            {% if category.success %}
+                <div class = "alert alert-{{ category }}" id = "success">
+                    {{ message }}
+                </div>
+            {% endif %}
+            {% if category.error %}
+                <div class = "alert alert-{{ category }}" id = "result">
+                    {{ message }}
+                </div>
+            {% endif %}
         {% endfor %}
     {% endif %}
 {% endwith %}
