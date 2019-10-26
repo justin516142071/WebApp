@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2275dc98-2718-46b6-a4f9-b79ade10c804" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content.txt" beforeDir="false" afterPath="$PROJECT_DIR$/content.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/site.db" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/site.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webroot/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webroot/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/templates/spell_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/templates/spell_check.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571716463931</updated>
       <workItem from="1571716468144" duration="14625000" />
-      <workItem from="1571976038287" duration="7619000" />
+      <workItem from="1571976038287" duration="7743000" />
     </task>
     <servers />
   </component>
