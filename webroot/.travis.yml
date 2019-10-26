@@ -8,5 +8,3 @@ install:
 before_script: cd webroot
 script:
     - tox
-    - coverage run
-    - coverage report --include="*webroot*" --omit="*test*"
