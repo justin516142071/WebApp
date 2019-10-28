@@ -3,49 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2275dc98-2718-46b6-a4f9-b79ade10c804" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/.tox-config1" beforeDir="false" afterPath="$PROJECT_DIR$/.tox/py37/.tox-config1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-1.log" beforeDir="false" afterPath="$PROJECT_DIR$/.tox/py37/log/py37-1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-10.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-11.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-12.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-13.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-14.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-15.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-16.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-17.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-18.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-19.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-2.log" beforeDir="false" afterPath="$PROJECT_DIR$/.tox/py37/log/py37-2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-20.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-21.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-23.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-24.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-25.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-26.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-27.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-28.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-29.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-3.log" beforeDir="false" afterPath="$PROJECT_DIR$/.tox/py37/log/py37-3.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-30.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-31.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-32.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-33.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-34.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-35.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-36.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-37.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-38.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-39.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-4.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-40.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-41.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-5.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-6.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-7.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-8.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py37/log/py37-9.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content.txt" beforeDir="false" afterPath="$PROJECT_DIR$/content.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tox.ini" beforeDir="false" afterPath="$PROJECT_DIR$/tox.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/site.db" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/site.db" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Flask server.webroot">
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="webroot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,7 +109,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571716463931</updated>
       <workItem from="1571716468144" duration="14625000" />
-      <workItem from="1571976038287" duration="20754000" />
+      <workItem from="1571976038287" duration="32127000" />
     </task>
     <servers />
   </component>
@@ -168,7 +130,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/webroot$test.coverage" NAME="test Coverage Results" MODIFIED="1572067711792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webroot" />
-    <SUITE FILE_PATH="coverage/webroot$webroot.coverage" NAME="webroot Coverage Results" MODIFIED="1572067414030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/webroot$test.coverage" NAME="test Coverage Results" MODIFIED="1572219525124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webroot" />
+    <SUITE FILE_PATH="coverage/webroot$webroot.coverage" NAME="webroot Coverage Results" MODIFIED="1572232365123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

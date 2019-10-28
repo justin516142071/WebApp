@@ -1,4 +1,4 @@
-from flask import render_template,url_for,flash,redirect
+from flask import render_template,url_for,flash,redirect,make_response
 from webroot.forms import RegistrationForm, LoginForm, SpellScheckForm
 from webroot import app, db, bcrypt
 from webroot.models import User
@@ -19,7 +19,9 @@ def login():
                 flash(f'Failure login account for {form.username.data}! Two-factor Authentication Failed', 'error')
         else:
             flash(f'Failure login account for {form.username.data}! Incorrect Username or Password', 'error')
-    return render_template('login.html', title='Login',form = form)
+    response = make_response(render_template('login.html', title='Login',form = form))
+    response.headers['Content-Security-Policy'] = "default-src 'self'"
+    return response
 
 @app.route('/register', methods=['GET','POST'])
 def register():
@@ -34,7 +36,9 @@ def register():
     elif(form.username.data != None):
         flash(f'Failure create account for {form.username.data}!', 'fail')
         return redirect(url_for('register'))
-    return render_template('register.html', title='Register',form = form)
+    response = make_response(render_template('register.html', title='Register',form = form))
+    response.headers['Content-Security-Policy'] = "default-src 'self'"
+    return response
 
 @app.route('/spell_check', methods=['GET','POST'])
 @login_required
@@ -49,5 +53,7 @@ def spell_check():
         subout = check_output(cmd).decode("utf-8")
         form.outcontent.data = form.content.data
         form.misspelled.data = subout
-    return render_template('spell_check.html', title='Spell Check', form=form)
+    response = make_response(render_template('spell_check.html', title='Spell Check', form=form))
+    response.headers['Content-Security-Policy'] = "default-src 'self'"
+    return response
 
