@@ -34,7 +34,7 @@ def register():
     form = RegistrationForm()
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
-        user = User(username=form.username.data, password=hashed_password, fc2 = form.fc2.data)
+        user = User(username=form.username.data, password=hashed_password, fc2 = form.fc2.data, role = 'User')
         db.session.add(user)
         db.session.commit()
         flash(f'Success created account for {form.username.data}!', 'success')
@@ -79,8 +79,6 @@ def logout():
 @login_required
 def history():
     form = HistoryForm()
-    if form.validate_on_submit():
-        return redirect(url_for('logout'))
     response = make_response(render_template('history.html', title='History', form=form))
     response.headers['Content-Security-Policy'] = "default-src 'self'"
     return response

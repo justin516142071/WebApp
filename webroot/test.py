@@ -1,4 +1,3 @@
-import random
 import unittest
 from webroot import app
 from flask import Flask

@@ -11,6 +11,7 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(60),unique=False, nullable=False)
     fc2 = db.Column(db.String(11), unique=False,nullable=False)
     currentLoginTime = db.Column(db.String(100),unique=False, nullable=True)
+    role = db.Column(db.String(60),unique=False, nullable=False)
     queries = db.relationship('Query', backref='user', lazy=True)
     histories = db.relationship('History', backref='user', lazy=True)
 
