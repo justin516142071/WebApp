@@ -37,3 +37,12 @@ class SpellScheckForm(FlaskForm):
     misspelled = StringField('Misspelled Words',render_kw={'readonly':True},id='misspelled')
 
     submit = SubmitField('Check')
+
+class HistoryForm(FlaskForm):
+    #content = TextAreaField('Content', validators=[DataRequired()],id='inputtext')
+
+    #outcontent = StringField('Textout',render_kw={'readonly':True},id='textout')
+
+    #misspelled = StringField('Misspelled Words',render_kw={'readonly':True},id='misspelled')
+
+    submit = SubmitField('Logout')

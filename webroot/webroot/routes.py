@@ -1,10 +1,12 @@
 from flask import render_template,url_for,flash,redirect,make_response
-from webroot.forms import RegistrationForm, LoginForm, SpellScheckForm
+from webroot.forms import RegistrationForm, LoginForm, SpellScheckForm,HistoryForm
 from webroot import app, db, bcrypt
-from webroot.models import User
-from flask_login import login_user, login_required
+from webroot.models import User,History,Query
+from flask_login import login_user, login_required, current_user,logout_user
 from subprocess import check_output
+from datetime import datetime
 
+@app.route("/")
 @app.route('/login', methods=['GET','POST'])
 def login():
     form = LoginForm()
@@ -12,7 +14,11 @@ def login():
         user = User.query.filter_by(username=form.username.data).first()
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             if user.fc2 == form.fc2.data:
-               login_user(user,remember=form.remember.data)
+               login_user(user, remember=form.remember.data)
+               history = History(user=current_user,logintime=str(datetime.now()),logouttime='N/A')
+               current_user.currentLoginTime = history.logintime
+               db.session.add(history)
+               db.session.commit()
                flash(f'Success login account for {form.username.data}!', 'success')
                return redirect(url_for('spell_check'))
             else:
@@ -53,7 +59,28 @@ def spell_check():
         subout = check_output(cmd).decode("utf-8")
         form.outcontent.data = form.content.data
         form.misspelled.data = subout
+        query = Query(querytext=content,queryresults=subout,username=current_user)
+        db.session.add(query)
+        db.session.commit()
     response = make_response(render_template('spell_check.html', title='Spell Check', form=form))
     response.headers['Content-Security-Policy'] = "default-src 'self'"
     return response
 
+
+@app.route("/logout")
+def logout():
+    history = History.query.filter_by(logintime=current_user.currentLoginTime)
+    history.logouttime = str(datetime.now())
+    db.session.commit()
+    logout_user()
+    return redirect(url_for('login'))
+
+@app.route("/history")
+@login_required
+def history():
+    form = HistoryForm()
+    if form.validate_on_submit():
+        return redirect(url_for('logout'))
+    response = make_response(render_template('history.html', title='History', form=form))
+    response.headers['Content-Security-Policy'] = "default-src 'self'"
+    return response
