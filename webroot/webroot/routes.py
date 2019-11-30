@@ -82,3 +82,9 @@ def history():
     response = make_response(render_template('history.html', title='History', posts=queries))
     response.headers['Content-Security-Policy'] = "default-src 'self'"
     return response
+
+@app.route("/history/query<int:queryid>")
+@login_required
+def query(queryid):
+    query = Query.query.get_or_404(queryid)
+    return render_template('query.html', title='Query', post=query)
