@@ -1,5 +1,5 @@
 from flask import render_template,url_for,flash,redirect,make_response
-from webroot.forms import RegistrationForm, LoginForm, SpellScheckForm,HistoryForm
+from webroot.forms import RegistrationForm, LoginForm, SpellScheckForm
 from webroot import app, db, bcrypt
 from webroot.models import User,History,Query
 from flask_login import login_user, login_required, current_user,logout_user
@@ -59,7 +59,7 @@ def spell_check():
         subout = check_output(cmd).decode("utf-8")
         form.outcontent.data = form.content.data
         form.misspelled.data = subout
-        query = Query(querytext=content,queryresults=subout,username=current_user)
+        query = Query(querytext=content,queryresults=subout,user=current_user)
         db.session.add(query)
         db.session.commit()
     response = make_response(render_template('spell_check.html', title='Spell Check', form=form))
@@ -78,7 +78,7 @@ def logout():
 @app.route("/history")
 @login_required
 def history():
-    form = HistoryForm()
-    response = make_response(render_template('history.html', title='History', form=form))
+    queries = Query.query.filter_by(user=current_user)
+    response = make_response(render_template('history.html', title='History', posts=queries))
     response.headers['Content-Security-Policy'] = "default-src 'self'"
     return response

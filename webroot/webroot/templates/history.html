@@ -7,10 +7,20 @@
 <body>
 {% block content %}
      <div class="content-section">
-        <form method="POST" action="">
-            {{ form.hidden_tag() }}
             <p><a href="{{ url_for('logout') }}">Log out</a></p>
-            </form>
+
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#" id ="username">{{ post.user.username }}</a>
+              <a class="mr-2" href="#" id ="queryid">{{ post.id }}</a>
+            </div>
+            <p class="article-content" id ="querytext">{{ post.querytext }}</p>
+            <p class="article-content" id ="queryresults">{{ post.queryresults }}</p>
+          </div>
+        </article>
+    {% endfor %}
          </div>
 {% endblock content %}
 </body>
