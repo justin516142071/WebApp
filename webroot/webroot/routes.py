@@ -47,7 +47,6 @@ def register():
     return response
 
 @app.route('/spell_check', methods=['GET','POST'])
-@login_required
 def spell_check():
     form = SpellScheckForm()
     if form.validate_on_submit():
