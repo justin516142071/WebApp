@@ -88,3 +88,8 @@ def history():
 def query(queryid):
     query = Query.query.get_or_404(queryid)
     return render_template('query.html', title='Query', post=query)
+
+@app.route("/login_history<int:userid>", methods=['GET'])
+def loginhistory(userid):
+    histories = History.query.filter_by(user_id=userid)
+    return render_template('login_history.html', title='Login History', posts=histories)
