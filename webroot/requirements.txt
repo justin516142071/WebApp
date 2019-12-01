@@ -5,3 +5,4 @@ flask_bcrypt
 flask_login
 wtforms
 flask_wtf
+Flask-WTF
