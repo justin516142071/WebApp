@@ -8,13 +8,13 @@
 {% block content %}
      <div class="content-section">
             <p><a href="{{ url_for('logout') }}">Log out</a></p>
-
+            <p class="article-content" id ="numqueries">{{ num }}</p>
     {% for post in posts %}
         <article class="media content-section">
           <div class="media-body">
             <div class="article-metadata">
               <a class="mr-2" id ="username">{{ post.user.username }}</a>
-              <a class="mr-2" href="{{ url_for('query', queryid=post.id) }}" id ="queryid">{{ post.id }}</a>
+              <a class="mr-2" href="{{ url_for('query', queryid=post.id) }}" id ="query{{post.id}}">{{ post.id }}</a>
             </div>
             <p class="article-content" id ="querytext">{{ post.querytext }}</p>
             <p class="article-content" id ="queryresults">{{ post.queryresults }}</p>

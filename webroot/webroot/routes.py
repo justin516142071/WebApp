@@ -88,7 +88,8 @@ def history():
 @login_required
 def query(queryid):
     query = Query.query.get_or_404(queryid)
-    return render_template('query.html', title='Query', post=query)
+    numqueries = query.count()
+    return render_template('query.html', title='Query', post=query,num=numqueries)
 
 @app.route("/login_history", methods=['GET','POST'])
 def loginhistory():
