@@ -97,10 +97,15 @@ def query(queryid):
     return render_template('query.html', title='Query', post=query)
 
 @app.route("/login_history", methods=['GET','POST'])
+@login_required
 def loginhistory():
-    form = LoginHistoryForm()
-    if form.validate_on_submit():
-        userid = User.query.filter_by(username=form.userid.data).first().id
-        histories = History.query.filter_by(user_id=userid)
-        return render_template('login_history.html', title='Login History', posts=histories,form=form)
-    return render_template('login_history.html', title='Login History', form=form)
+    if current_user.role != 'Admin':
+        return make_response("Unauthorized",401)
+    else:
+        form = LoginHistoryForm()
+        if form.validate_on_submit():
+            userid = User.query.filter_by(username=form.userid.data).first().id
+            histories = History.query.filter_by(user_id=userid)
+            return render_template('login_history.html', title='Login History', posts=histories,form=form)
+        return render_template('login_history.html', title='Login History', form=form)
+
