@@ -81,10 +81,12 @@ def logout():
 def history():
     if current_user.role == 'User':
         queries = Query.query.filter_by(user=current_user)
-        response = make_response(render_template('history.html', title='History', posts=queries))
+        numqueries = len(list(queries))
+        response = make_response(render_template('history.html', title='History', posts=queries,num=numqueries))
     elif current_user.role == 'Admin':
         queries = Query.query.all()
-        response = make_response(render_template('history.html', title='History', posts=queries))
+        numqueries = len(list(queries))
+        response = make_response(render_template('history.html', title='History', posts=queries,num=numqueries))
     response.headers['Content-Security-Policy'] = "default-src 'self'"
     return response
 
@@ -92,8 +94,7 @@ def history():
 @login_required
 def query(queryid):
     query = Query.query.get_or_404(queryid)
-    numqueries = len(query)
-    return render_template('query.html', title='Query', post=query,num=numqueries)
+    return render_template('query.html', title='Query', post=query)
 
 @app.route("/login_history", methods=['GET','POST'])
 def loginhistory():
