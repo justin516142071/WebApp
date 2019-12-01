@@ -5,7 +5,7 @@ from webroot.models import User
 
 class RegistrationForm(FlaskForm):
     username = StringField('Username',
-                           validators=[DataRequired(),Length(min=6,max=20)],id = 'uname')
+                           validators=[DataRequired(),Length(min=5,max=20)],id = 'uname')
     fc2 = StringField('Two Factor',
                       validators=[DataRequired(),Length(min=10,max=11)],id= '2fa')
     password = PasswordField('Password',
