@@ -94,7 +94,7 @@ def history():
 @login_required
 def query(queryid):
     if(current_user!= Query.query.get_or_404(queryid).user and current_user.role != 'Admin'):
-        return render_template('query.html', title='Query')
+        return make_response("Unauthorized", 200)
     else:
         query = Query.query.get_or_404(queryid)
         return render_template('query.html', title='Query', post=query)
