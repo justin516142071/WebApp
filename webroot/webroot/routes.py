@@ -93,8 +93,11 @@ def history():
 @app.route("/history/query<int:queryid>")
 @login_required
 def query(queryid):
-    query = Query.query.get_or_404(queryid)
-    return render_template('query.html', title='Query', post=query)
+    if(current_user!= Query.query.get_or_404(queryid).user_id and current_user.role != 'Admin'):
+        return make_response("Unauthorized", 401)
+    else:
+        query = Query.query.get_or_404(queryid)
+        return render_template('query.html', title='Query', post=query)
 
 @app.route("/login_history", methods=['GET','POST'])
 @login_required
