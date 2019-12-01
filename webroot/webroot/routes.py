@@ -1,5 +1,5 @@
 from flask import render_template,url_for,flash,redirect,make_response
-from webroot.forms import RegistrationForm, LoginForm, SpellScheckForm
+from webroot.forms import RegistrationForm, LoginForm, SpellScheckForm,LoginHistoryForm
 from webroot import app, db, bcrypt
 from webroot.models import User,History,Query
 from flask_login import login_user, login_required, current_user,logout_user
@@ -90,7 +90,11 @@ def query(queryid):
     query = Query.query.get_or_404(queryid)
     return render_template('query.html', title='Query', post=query)
 
-@app.route("/login_history<int:userid>", methods=['GET'])
-def loginhistory(userid):
-    histories = History.query.filter_by(user_id=userid)
-    return render_template('login_history.html', title='Login History', posts=histories)
+@app.route("/login_history", methods=['GET','POST'])
+def loginhistory():
+    form = LoginHistoryForm()
+    if form.validate_on_submit():
+        userid = User.query.filter_by(username=form.userid.data).first().id
+        histories = History.query.filter_by(user_id=userid)
+        return render_template('login_history.html', title='Login History', posts=histories,form=form)
+    return render_template('login_history.html', title='Login History', form=form)

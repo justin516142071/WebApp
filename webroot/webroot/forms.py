@@ -38,3 +38,7 @@ class SpellScheckForm(FlaskForm):
 
     submit = SubmitField('Check')
 
+class LoginHistoryForm(FlaskForm):
+    userid = TextAreaField('User Id', validators=[DataRequired()],id='userid')
+
+    submit = SubmitField('Check')

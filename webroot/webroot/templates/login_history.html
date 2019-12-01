@@ -7,6 +7,27 @@
 <body>
 {% block content %}
      <div class="content-section">
+     <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <div class="form-group">
+                {{ form.userid.label(class="form-control-label") }}
+                {% if form.userid.errors %}
+                    {{ form.userid(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.userid.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.userid(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+    </form>
     {% for post in posts %}
         <article class="media content-section">
           <div class="media-body">
