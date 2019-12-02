@@ -47,6 +47,7 @@ def register():
     return response
 
 @app.route('/spell_check', methods=['GET','POST'])
+@login_required
 def spell_check():
     form = SpellScheckForm()
     if form.validate_on_submit():
@@ -93,7 +94,7 @@ def history():
 @login_required
 def query(queryid):
     if(current_user!= Query.query.get_or_404(queryid).user and current_user.role != 'Admin'):
-        return make_response("Unauthorized", 200)
+        return make_response("Unauthorized", 401)
     else:
         query = Query.query.get_or_404(queryid)
         return render_template('query.html', title='Query', post=query)
