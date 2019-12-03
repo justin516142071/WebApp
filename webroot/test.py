@@ -30,6 +30,18 @@ class FlaskTestCase(unittest.TestCase):
         res = self.app.get("/spell_check")
         assert res.status_code == 401
 
+    def test_route_history(self):
+        res = self.app.get("/history")
+        assert res.status_code == 401
+
+    def test_route_query1(self):
+        res = self.app.get("/history/query1")
+        assert res.status_code == 401
+
+    def test_route_login_history(self):
+        res = self.app.get("/login_history")
+        assert res.status_code == 401
+
     def test_route_loginacc(self):
         res = self.app.post("/login", data={'uname': 'easyeasyacc', 'pword': '123456', '2fa': '1234567890'})
         assert res.status_code == 200
