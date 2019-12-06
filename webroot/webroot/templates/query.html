@@ -10,11 +10,11 @@
         <article class="media content-section">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" id ="username">{{ post.user.username }}</a>
-              <a class="mr-2" id ="queryid">{{ post.id }}</a>
+              <a class="mr-2" id ="username">Username: {{ post.user.username }}</a>
+              <a class="mr-2" id ="queryid">Query Id: {{ post.id }}</a>
             </div>
-            <p class="article-content" id ="querytext">{{ post.querytext }}</p>
-            <p class="article-content" id ="queryresults">{{ post.queryresults }}</p>
+            <p class="article-content" id ="querytext">Query Text: {{ post.querytext }}</p>
+            <p class="article-content" id ="queryresults">Query Result (Misspelled Words): {{ post.queryresults }}</p>
           </div>
         </article>
          </div>

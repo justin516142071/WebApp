@@ -70,7 +70,7 @@ def spell_check():
 @app.route("/logout")
 @login_required
 def logout():
-    history = History.query.filter_by(logintime=current_user.currentLoginTime)
+    history = History.query.filter_by(user=current_user).first()
     history.logouttime = str(datetime.now())
     db.session.commit()
     logout_user()
